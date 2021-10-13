@@ -53,3 +53,7 @@ Driver users are able to look at their company's fleet and reserve a truck.
 
 * Encountered a webpacker error on initial `rails server`. Had to install yarn and run `rails webpacker:install`. 
 
+#### Test setup
+
+* Encountered an error running `rails test` due to Ruby >= 3.0, so I added `rexml` to the Gemfile
+
