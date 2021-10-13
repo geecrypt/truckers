@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :trucks
   root :to => "welcome#index"
 
   get 'welcome/index'
