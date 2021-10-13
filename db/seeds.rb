@@ -9,3 +9,5 @@
 transx = Company.create(name: 'TransX', email: 'info@transx.com', description: 'A shipping company', phone_number: '1-800-123-4567') 
 User.create(company: transx, name: 'admin', role: 'admin', email: 'admin@transx.com', password: '123456')
 User.create(company: transx, name: 'driver', role: 'driver', email: 'driver@transx.com', password: '123456')
+Truck.create(company: transx, name: 'F-150', type: '1 ton', year: 2015, capacity: 1500)
+Truck.create(company: transx, name: 'F-250', type: '2 ton', year: 2018, capacity: 2500, reserved: true)
