@@ -44,3 +44,12 @@ Driver users are able to look at their company's fleet and reserve a truck.
 4. Define two User roles: `admin` and `driver`
   * `admin` Users should be able to add, edit, and delete trucks
   * `driver` Users should be able to view and reserve trucks
+
+---
+
+### My Solution
+
+#### Environment setup (10 mins)
+
+* Encountered a webpacker error on initial `rails server`. Had to install yarn and run `rails webpacker:install`. 
+
