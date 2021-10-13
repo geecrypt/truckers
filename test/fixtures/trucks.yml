@@ -1,17 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  company: one
-  type: 
-  year: 1
-  capacity: 1
+  name: F-150
+  company: transx
+  type: 1 ton
+  year: 2015
+  capacity: 1500
   reserved: false
 
 two:
-  name: MyString
-  company: two
-  type: 
-  year: 1
-  capacity: 1
+  name: F-250
+  company: transx
+  type: 2 ton
+  year: 2018
+  capacity: 2500
   reserved: false
