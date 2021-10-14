@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       put :reserve
     end
   end
+
   root to: 'welcome#index'
 
   get 'welcome/index'

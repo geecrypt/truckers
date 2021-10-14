@@ -123,7 +123,6 @@ To run the server: `rails server`
 * add logout button
 * add ability to close flash notifications, or have them timeout
 * add more validation to users and trucks models
-* allow admins to create companies
 * add a user profile page
 * improve reservation handling:
   * specify duration

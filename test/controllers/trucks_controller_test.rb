@@ -27,7 +27,7 @@ class TrucksControllerTest < ActionDispatch::IntegrationTest
   test 'should reserve truck' do
     login_as(users(:driver))
     put reserve_truck_url(@truck)
-    assert_response :success
+    assert_redirected_to trucks_url
   end
 
   test 'should create truck' do
