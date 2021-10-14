@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :trucks
-  root :to => "welcome#index"
+  resources :trucks do
+    member do
+      put :reserved
+    end
+  end
+  root to: 'welcome#index'
 
   get 'welcome/index'
   get 'sessions/new'

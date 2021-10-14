@@ -61,5 +61,22 @@ Driver users are able to look at their company's fleet and reserve a truck.
 #### TDD for trucks_controller access control
 
 * Auth gems: reviewed `pundit` and `cancancan`, and went with the latter.
-* 
+
+* To create a  `reserved` route, I referenced the Rails routes docs:
+
+  > #### [2.10 Adding More RESTful Actions](https://guides.rubyonrails.org/routing.html#adding-more-restful-actions)
+  >
+  > You are not limited to the seven routes that RESTful routing creates by default. If you like, you may add additional routes that apply to the collection or individual members of the collection.
+  >
+  > ##### [2.10.1 Adding Member Routes](https://guides.rubyonrails.org/routing.html#adding-member-routes)
+  >
+  > To add a member route, just add a [`member`](https://api.rubyonrails.org/v6.1.4/classes/ActionDispatch/Routing/Mapper/Resources.html#method-i-member) block into the resource block:
+  >
+  > ```
+  > resources :photos do
+  >   member do
+  >     get 'preview'
+  >   end
+  > end
+  > ```
 

@@ -12,6 +12,12 @@ class TrucksController < ApplicationController
   # GET /trucks/1 or /trucks/1.json
   def show; end
 
+  # reserve a truck (driver)
+  def reserve
+    @truck.reserved = !@truck.reserved
+    @truck.save
+  end
+
   # creating a new truck (admin only)
   # GET /trucks/new
   def new
@@ -22,6 +28,7 @@ class TrucksController < ApplicationController
   # GET /trucks/1/edit
   def edit; end
 
+  # creating a new truck (admin only
   # POST /trucks or /trucks.json
   def create
     @truck = Truck.new(truck_params)
@@ -37,7 +44,6 @@ class TrucksController < ApplicationController
     end
   end
 
-  # reserve a truck (driver)
   # PATCH/PUT /trucks/1 or /trucks/1.json
   def update
     respond_to do |format|
