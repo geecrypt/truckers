@@ -30,5 +30,7 @@
   <%= @truck.reserved %>
 </p>
 
+<% if can? :edit, @truck %>
 <%= link_to 'Edit', edit_truck_path(@truck) %> |
+<% end %>
 <%= link_to 'Back', trucks_path %>

@@ -25,8 +25,10 @@
         <td><%= truck.capacity %></td>
         <td><%= truck.reserved %></td>
         <td><%= link_to 'Show', truck %></td>
+        <% if can? :edit, @truck %>
         <td><%= link_to 'Edit', edit_truck_path(truck) %></td>
         <td><%= link_to 'Destroy', truck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

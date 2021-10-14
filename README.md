@@ -49,27 +49,24 @@ Driver users are able to look at their company's fleet and reserve a truck.
 
 ### My Solution
 
+To run the tests from the root of the project: `rails test test/controllers/trucks_controller_test.rb`
+
 #### Environment setup (10 mins)
 
 * Encountered a webpacker error on initial `rails server`. Had to install yarn and run `rails webpacker:install`. 
 
-#### Test setup (1 hr)
+#### Test setup (1.5 hr)
 
 * Encountered an error running `rails test` due to Ruby >= 3.0, so I added `rexml` to the Gemfile
 * Added trucks and company fixtures to use with test database
 
-#### TDD for trucks_controller access control
+#### TDD for trucks_controller access control(3 hr)
 
 * Auth gems: reviewed `pundit` and `cancancan`, and went with the latter.
+* I followed TDD to implement the trucks_controller access control. Cancan doesn't allow any resources to be accessed by default, so this resulted in all tests failing at first. I then added the abilities to the driver and admin roles one by one and checked that tests were passing before moving on.
 
 * To create a  `reserved` route, I referenced the Rails routes docs:
 
-  > #### [2.10 Adding More RESTful Actions](https://guides.rubyonrails.org/routing.html#adding-more-restful-actions)
-  >
-  > You are not limited to the seven routes that RESTful routing creates by default. If you like, you may add additional routes that apply to the collection or individual members of the collection.
-  >
-  > ##### [2.10.1 Adding Member Routes](https://guides.rubyonrails.org/routing.html#adding-member-routes)
-  >
   > To add a member route, just add a [`member`](https://api.rubyonrails.org/v6.1.4/classes/ActionDispatch/Routing/Mapper/Resources.html#method-i-member) block into the resource block:
   >
   > ```
@@ -81,4 +78,11 @@ Driver users are able to look at their company's fleet and reserve a truck.
   > ```
 
 * Made the decision to only allow drivers to reserve trucks if the company ids were the same.
+
+#### User Login and Registration (1 hr)
+
+* Had an issue with trying to save `params` that were not valid fields of the `user` model, so I used the `params.permit` method.
+
+#### Future improvements
+
 * 
