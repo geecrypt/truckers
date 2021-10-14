@@ -85,4 +85,6 @@ To run the tests from the root of the project: `rails test test/controllers/truc
 
 #### Future improvements
 
+* fix trucks re-ordering after updating reservation status
+* style form and list elements
 * 

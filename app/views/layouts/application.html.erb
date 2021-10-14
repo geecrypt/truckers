@@ -12,7 +12,9 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <img class="nav-truck" src="<%= image_path('truck_grey.png') %>" width="37" height="37"/>
+          <%= link_to root_path do %>
+            <%= image_tag 'truck_grey.png', class: "nav-truck", width: 37, height: 37 %>
+          <% end %>
         </div>
         <ul class="nav nav-tabs pull-right">
             <li>
