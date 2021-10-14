@@ -18,10 +18,11 @@ class TrucksControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test 'should get new' do
-  #   get new_truck_url
-  #   assert_response :success
-  # end
+  test 'should get new' do
+    login_as(users(:admin))
+    get new_truck_url
+    assert_response :success
+  end
 
   test 'should reserve truck' do
     login_as(users(:driver))
@@ -29,15 +30,16 @@ class TrucksControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test 'should create truck' do
-  #   assert_difference('Truck.count') do
-  #     post trucks_url,
-  #          params: { truck: { capacity: @truck.capacity, company_id: @truck.company_id, name: @truck.name,
-  #                             reserved: @truck.reserved, type: @truck.type, year: @truck.year } }
-  #   end
+  test 'should create truck' do
+    login_as(users(:admin))
+    assert_difference('Truck.count') do
+      post trucks_url,
+           params: { truck: { capacity: @truck.capacity, company_id: @truck.company_id, name: @truck.name,
+                              reserved: @truck.reserved, type: @truck.type, year: @truck.year } }
+    end
 
-  #   assert_redirected_to truck_url(Truck.last)
-  # end
+    assert_redirected_to truck_url(Truck.last)
+  end
 
   test 'should show truck' do
     login_as(users(:driver))
@@ -45,23 +47,26 @@ class TrucksControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test 'should get edit' do
-  #   get edit_truck_url(@truck)
-  #   assert_response :success
-  # end
+  test 'should get edit' do
+    login_as(users(:admin))
+    get edit_truck_url(@truck)
+    assert_response :success
+  end
 
-  # test 'should update truck' do
-  #   patch truck_url(@truck),
-  #         params: { truck: { capacity: @truck.capacity, company_id: @truck.company_id, name: @truck.name,
-  #                            reserved: @truck.reserved, type: @truck.type, year: @truck.year } }
-  #   assert_redirected_to truck_url(@truck)
-  # end
+  test 'should update truck' do
+    login_as(users(:admin))
+    patch truck_url(@truck),
+          params: { truck: { capacity: @truck.capacity, company_id: @truck.company_id, name: @truck.name,
+                             reserved: @truck.reserved, type: @truck.type, year: @truck.year } }
+    assert_redirected_to truck_url(@truck)
+  end
 
-  # test 'should destroy truck' do
-  #   assert_difference('Truck.count', -1) do
-  #     delete truck_url(@truck)
-  #   end
+  test 'should destroy truck' do
+    login_as(users(:admin))
+    assert_difference('Truck.count', -1) do
+      delete truck_url(@truck)
+    end
 
-  #   assert_redirected_to trucks_url
-  # end
+    assert_redirected_to trucks_url
+  end
 end
