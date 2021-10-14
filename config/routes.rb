@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :trucks do
     member do
-      put :reserved
+      put :reserve
     end
   end
   root to: 'welcome#index'

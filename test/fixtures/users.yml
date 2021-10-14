@@ -1,0 +1,13 @@
+admin:
+  company: transx
+  name: "Sam"
+  role: "admin"
+  email: "admin@transx.com"
+  password_hash: "$2b$12$h0q30TiUGYGhqvnBtm6hdOps3MQhSrOi6C89vyBCcYNqzxkpAoJrm" # 123456
+
+driver:
+  company: transx
+  name: "Kit"
+  role: "driver"
+  email: "driver@transx.com"
+  password_hash: "$2b$12$h0q30TiUGYGhqvnBtm6hdOps3MQhSrOi6C89vyBCcYNqzxkpAoJrm" # 123456

@@ -80,3 +80,5 @@ Driver users are able to look at their company's fleet and reserve a truck.
   > end
   > ```
 
+* Made the decision to only allow drivers to reserve trucks if the company ids were the same.
+* 
