@@ -12,10 +12,11 @@ class TrucksControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  # test 'should get index' do
-  #   get trucks_url
-  #   assert_response :success
-  # end
+  test 'should get index' do
+    login_as(users(:driver))
+    get trucks_url
+    assert_response :success
+  end
 
   # test 'should get new' do
   #   get new_truck_url
@@ -38,10 +39,11 @@ class TrucksControllerTest < ActionDispatch::IntegrationTest
   #   assert_redirected_to truck_url(Truck.last)
   # end
 
-  # test 'should show truck' do
-  #   get truck_url(@truck)
-  #   assert_response :success
-  # end
+  test 'should show truck' do
+    login_as(users(:driver))
+    get truck_url(@truck)
+    assert_response :success
+  end
 
   # test 'should get edit' do
   #   get edit_truck_url(@truck)

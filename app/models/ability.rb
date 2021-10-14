@@ -5,8 +5,7 @@ class Ability
 
   def initialize(user)
     return unless user
-    if user.role == 'driver'
-      can :reserve, Truck, company_id: user.company_id
-    end
+
+    can %i[read reserve], Truck, company_id: user.company_id if user.role == 'driver'
   end
 end

@@ -44,6 +44,7 @@ class TrucksController < ApplicationController
     end
   end
 
+  # editing an existing truck (admin only)
   # PATCH/PUT /trucks/1 or /trucks/1.json
   def update
     respond_to do |format|
