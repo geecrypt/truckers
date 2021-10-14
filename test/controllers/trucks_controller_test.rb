@@ -5,6 +5,13 @@ class TrucksControllerTest < ActionDispatch::IntegrationTest
     @truck = trucks(:one)
   end
 
+  test 'should not allow unauthenticated users' do
+    [trucks_url, new_truck_url, edit_truck_url(@truck), truck_url(@truck)].each do |url|
+      get url
+      assert_response :forbidden
+    end
+  end
+
   test 'should get index' do
     get trucks_url
     assert_response :success

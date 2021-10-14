@@ -57,3 +57,7 @@ Driver users are able to look at their company's fleet and reserve a truck.
 
 * Encountered an error running `rails test` due to Ruby >= 3.0, so I added `rexml` to the Gemfile
 
+#### User access control
+
+* Reviewed `pundit` and `cancancan`, and went with the latter.
+* 
