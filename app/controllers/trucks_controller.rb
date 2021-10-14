@@ -5,7 +5,7 @@ class TrucksController < ApplicationController
   # viewing a list of trucks
   # GET /trucks or /trucks.json
   def index
-    @trucks = Truck.all
+    @trucks = Truck.order(id: :asc).all
   end
 
   # viewing one single truck
@@ -16,6 +16,7 @@ class TrucksController < ApplicationController
   def reserve
     @truck.reserved = !@truck.reserved
     @truck.save
+    redirect_back(fallback_location: trucks_path)
   end
 
   # creating a new truck (admin only)
