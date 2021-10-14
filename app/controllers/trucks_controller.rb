@@ -1,4 +1,5 @@
 class TrucksController < ApplicationController
+  load_and_authorize_resource
   before_action :set_truck, only: %i[show edit update destroy]
 
   # viewing a list of trucks

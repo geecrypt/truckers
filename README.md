@@ -53,11 +53,13 @@ Driver users are able to look at their company's fleet and reserve a truck.
 
 * Encountered a webpacker error on initial `rails server`. Had to install yarn and run `rails webpacker:install`. 
 
-#### Test setup
+#### Test setup (1 hr)
 
 * Encountered an error running `rails test` due to Ruby >= 3.0, so I added `rexml` to the Gemfile
+* Added trucks and company fixtures to use with test database
 
-#### User access control
+#### TDD for trucks_controller access control
 
-* Reviewed `pundit` and `cancancan`, and went with the latter.
+* Auth gems: reviewed `pundit` and `cancancan`, and went with the latter.
 * 
+
